@@ -33,7 +33,7 @@ def get_diff() :
 
 
 def calculate_total_diff():
-    for week in range(1, 17):
+    for week in range(1, nfl_week()):
         box_scores = league.box_scores(week)
         for box_score in box_scores:
             for player in box_score.home_lineup:
@@ -45,9 +45,9 @@ def calculate_total_diff():
 
     return players_diff
 
-years = [2021, 2022, 2023]
+years = [2023]
 for y in years : 
-    league = League(league_id=377713, year=y, espn_s2='AEBo%2FDSghEyopRom%2B%2FtMgQCVgob4m4CHfgKjaZuQQ1qMfA0q4%2Bl96vz8GqY3A47mEjQRyNvkbpZUHLH4o%2FihdFf30ziCTDW42NN5LadgbWMYF6MIHoMf%2FQmYESVDZM4WyOIesWzu%2FEm57BCXy8lLTj31%2B1LHkyEb5GUzAWEFLD70hZ8evjJvKG6X11wKl7CHlAnBMTfK7doJpgBV4LDWZobIaTLYM4xGJk46ab6wcxgSa258nFGbbxkqtuMZnvogmxBGDGiw7L0c4TxUnkbPqmiu', swid='{05B48DDE-7249-4D88-B48D-DE72494D88D4}')
+    league = League(league_id=377713, year=y, espn_s2=' ', swid='{  }')
     total_diff = calculate_total_diff()
 
 # If this script is run on its own, then print the results

@@ -2,7 +2,7 @@ import re
 from espn_api.football import League
 
 # Your league connection and teams mapping
-league = League(league_id=377713, year=2023, espn_s2='', swid='')
+league = League(league_id=377713, year=2023, espn_s2=' ', swid='{  }')
 team = league.teams[2]
 
 teams_to_owners = {
